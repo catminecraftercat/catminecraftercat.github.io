@@ -19,7 +19,7 @@ body {
     user-select: none;
     margin: 0;
     font-family: 'Comic Sans MS';
-    background-image: url(img/018f58045c381028f41d53cb10363d64.jpg);
+    background-image: url(018f58045c381028f41d53cb10363d64.jpg);
 }
 
 .logo-text {
@@ -98,37 +98,37 @@ body {
 }
 
 .p1 {
-    background-image: url(img/pizza1.jpg);
+    background-image: url(pizza1.jpg);
     border-radius: 15px;
 }
 
 .p2 {
-    background-image: url(img/pizza2.jpg);
+    background-image: url(pizza2.jpg);
     border-radius: 15px;
 }
 
 .p3 {
-    background-image: url(img/pizza3.jpg);
+    background-image: url(pizza3.jpg);
     border-radius: 15px;
 }
 
 .p4 {
-    background-image: url(img/pizza4.jpg);
+    background-image: url(pizza4.jpg);
     border-radius: 15px;
 }
 
 .p5 {
-    background-image: url(img/pizza5.jpg);
+    background-image: url(pizza5.jpg);
     border-radius: 15px;
 }
 
 .p6 {
-    background-image: url(img/pizza6.jpg);
+    background-image: url(pizza6.jpg);
     border-radius: 15px;
 }
 
 .p7 {
-    background-image: url(img/pizza7.jpg);
+    background-image: url(pizza7.jpg);
     border-radius: 15px;
 }
 
@@ -138,7 +138,7 @@ body {
 }
 
 .p9 {
-    background-image: url(img/pizza9.jpg);
+    background-image: url(pizza9.jpg);
     border-radius: 15px;
 }
 
