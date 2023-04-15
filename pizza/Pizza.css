@@ -1,0 +1,304 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(250, 235, 215, 0.500);
+    border-radius: 0 0 50px 50px;
+    padding: 20px;
+}
+
+.logo-img {
+    width: 100px;
+}
+
+img {
+    border-radius: 15px;
+    width: 100%;
+}
+
+body {
+    user-select: none;
+    margin: 0;
+    font-family: 'Comic Sans MS';
+    background-image: url(img/018f58045c381028f41d53cb10363d64.jpg);
+}
+
+.logo-text {
+    font-size: 2em;
+    font-family: 'Lobster', cursive;
+}
+
+.menu {
+    padding-left: 0;
+    text-align: center;
+}
+
+.menu>li {
+    background-color: rgba(250, 235, 215, 0.450);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    width: 150px;
+    color: green;
+    list-style-type: none;
+    font-weight: 900;
+    transition: 0.5s;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    border-top: 15px;
+    border-bottom: 15px;
+
+}
+
+.menu>li:hover {
+    background-color: rgba(250, 235, 215, 0.450);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    width: 150px;
+    color: rgba(255, 68, 0, 0.700);
+    list-style-type: none;
+    font-weight: 900;
+    box-shadow: 0px 0px 0px 5px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.aside {
+    background-color: rgb(250, 235, 215, 0.450);
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-radius: 15px;
+    width: 300px;
+    margin: 10px;
+}
+
+.main {
+    display: flex;
+    background-color: rgb(250, 235, 215, 0.450);
+    margin: 15px;
+    border-radius: 15px;
+}
+
+.pizza {
+    width: 165px;
+    height: 128px;
+    color: antiquewhite;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0px;
+    margin: 15px;
+    background-size: cover;
+}
+
+.pizza p {
+    margin: 0;
+}
+
+.p1 {
+    background-image: url(img/pizza1.jpg);
+    border-radius: 15px;
+}
+
+.p2 {
+    background-image: url(img/pizza2.jpg);
+    border-radius: 15px;
+}
+
+.p3 {
+    background-image: url(img/pizza3.jpg);
+    border-radius: 15px;
+}
+
+.p4 {
+    background-image: url(img/pizza4.jpg);
+    border-radius: 15px;
+}
+
+.p5 {
+    background-image: url(img/pizza5.jpg);
+    border-radius: 15px;
+}
+
+.p6 {
+    background-image: url(img/pizza6.jpg);
+    border-radius: 15px;
+}
+
+.p7 {
+    background-image: url(img/pizza7.jpg);
+    border-radius: 15px;
+}
+
+.p8 {
+    background-image: url(img/pizza8.jpg);
+    border-radius: 15px;
+}
+
+.p9 {
+    background-image: url(img/pizza9.jpg);
+    border-radius: 15px;
+}
+
+.container {
+    background-color: rgb(250, 235, 215, 0.450);
+    border-radius: 15px;
+    color: chocolate;
+    font-weight: 900;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.t1 {
+    background-color: rgb(250, 235, 215, 0.450);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    width: 150px;
+    color: chocolate;
+    font-weight: 900;
+    flex-wrap: wrap;
+}
+
+.t2 {
+    background-color: rgb(250, 235, 215, 0.450);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    width: 150px;
+    color: chocolate;
+    font-weight: 900;
+    flex-wrap: wrap;
+}
+
+.t3 {
+    background-color: rgb(250, 235, 215, 0.450);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    width: 150px;
+    color: chocolate;
+    font-weight: 900;
+    flex-wrap: wrap;
+}
+
+.choice {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer {
+    background-color: rgba(255, 219, 76, 0.761);
+    padding: 50px;
+    background-color: rgba(215, 215, 250, 0.5);
+    border-radius: 50px 50px 0 0;
+    font-size: 1.5em;
+}
+
+.Facebook {
+    text-decoration: none;
+    margin: 5px;
+    color: black;
+    transition: 0.5s;
+}
+
+.Facebook:hover {
+    text-decoration: none;
+    margin: 5px;
+    color: blue;
+    transition: 0.5s;
+}
+
+.Discord {
+    text-decoration: none;
+    margin: 5px;
+    color: black;
+    transition: 0.5s;
+}
+
+.Discord:hover {
+    text-decoration: none;
+    margin: 5px;
+    color: rgb(0, 149, 255);
+    transition: 0.5s;
+}
+
+.YouTube {
+    text-decoration: none;
+    margin: 5px;
+    color: black;
+    transition: 0.5s;
+}
+
+.YouTube:hover {
+    text-decoration: none;
+    margin: 5px;
+    color: red;
+    transition: 0.5s;
+}
+
+.Instagram {
+    text-decoration: none;
+    margin: 5px;
+    color: black;
+    transition: 0.5s;
+}
+
+.Instagram:hover {
+    text-decoration: none;
+    margin: 5px;
+    color: rgb(170, 0, 255);
+    transition: 0.5s;
+}
+
+.Twitter {
+    text-decoration: none;
+    margin: 5px;
+    color: black;
+    transition: 0.5s;
+}
+
+.Twitter:hover {
+    text-decoration: none;
+    margin: 5px;
+    color: rgb(0, 145, 255);
+    transition: 0.5s;
+}
+
+.text-footer {
+    text-align: left;
+}
+
+.text-2,
+.foto {
+    width: 300px;
+    padding: 20px;
+    margin: 30px;
+    flex-grow: 1;
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.our-principles {
+    background-color: rgba(250, 235, 215, 0.450);
+    border-radius: 15px;
+    margin: 15px;
+}
+
+.prava {
+    width: 20%;
+}

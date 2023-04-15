@@ -1,0 +1,21 @@
+1. Розташувати блоки
+2. Кольори:
+	бокової панелі, рамки кругом шапки, основного блоку: #ccd0d1
+	пунктів меню: rgb(143, 155, 167);
+	пунктів меню, при наведенні: rgb(114, 128, 141);
+	бокової лінії верхнього тексту: gray
+	тексту написаного на "піцах": blanchedalmond 
+	підвалу сторінки: #768488
+
+3. Шрифт цитати, яка розміщена в шапці:'Lobster', cursive;
+4. Шрифт всієї сторінки: 'Merriweather', serif;
+
+
+Підключення шрифтів:
+<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i,900,900i&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+   
+
+Для Font Awesome
+ <script src="https://use.fontawesome.com/3796e11724.js"></script>
+
