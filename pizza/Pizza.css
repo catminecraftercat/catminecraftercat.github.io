@@ -19,7 +19,7 @@ body {
     user-select: none;
     margin: 0;
     font-family: 'Comic Sans MS';
-    background-color: url(018f58045c381028f41d53cb10363d64.jpg);
+    background-image: url(018f58045c381028f41d53cb10363d64.jpg);
 }
 
 .logo-text {
