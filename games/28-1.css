@@ -1,0 +1,59 @@
+body {
+    text-align: center;
+    background-image: url(joystick-vector-seamless-pattern-editable-can-be-used-for-web-page-backgrounds-pattern-fills_159242-1537.avif);
+}
+
+.pon {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.500);
+}
+
+.pon2 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+    background-color: rgba(104, 104, 104, 0.5);
+    border-radius: 15px;
+}
+
+.navbar {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.text {
+    background-color: rgba(255, 255, 255, 0.850);
+}
+
+.Text {
+    color: black;
+}
+
+img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.ramka {
+    border: 5px solid white;
+    border-radius: 10px;
+}
+
+iframe {
+    border-radius: 15px;
+}
+
+.row {
+    margin: 50px 0;
+}
+
+.gg {
+    border-radius: 50%;
+}
+
+p,
+h3 {
+    color: white;
+    font-weight: 500;
+}
