@@ -1,0 +1,65 @@
+img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.history {
+    background-color: red;
+    text-align: center;
+    color: white;
+    border-radius: 15px;
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+}
+
+.logo {
+    width: 50px;
+}
+
+.nav-item {
+    background-color: red;
+    margin: 7px;
+    border-radius: 50px;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: rgb(255, 218, 218);
+}
+
+.big-photo {
+    background-image: url(1.jpg);
+    height: 100vh;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 15px;
+}
+
+.table {
+    vertical-align: middle;
+}
+
+.footer {
+    background: url(4.jpg);
+     background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 15px;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    align-items: center;
+}
+
+.list-group-item {
+    background-color: rgba(255, 0, 0, 0.500);
+    color: white;
+}
