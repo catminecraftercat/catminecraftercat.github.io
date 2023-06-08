@@ -1,0 +1,184 @@
+body {
+    font-family: 'Comic Sans MS';
+    background-image: url(src.jfif);
+    user-select: none;
+}
+.navbar {
+    background-color: #ffffffcd;
+    border-radius: 0px 0px 15px 15px;
+}
+
+h1, h2, h3 {
+    color: greenyellow;
+}
+
+.s {
+    border-radius: 15px;
+}
+
+.fon-pizza {
+    background-image: url(018f58045c381028f41d53cb10363d64.jpg);
+}
+
+.container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.fon-gray {
+    background-color: #07070799;
+    color: aliceblue;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.img {
+    width: 10%;
+}
+
+.navbar {
+    background-color: #ffffffda;
+}
+
+.pizza {
+    background-color: rgba(255, 255, 255, 0.580);
+    width: 100%;
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+}
+
+.pizza-card {
+    border-radius: 15px;
+    background-color: #3d3c3cf3;
+    color: antiquewhite;
+    padding: 15px;
+    text-align: center;
+    height: 100%;
+}
+
+.pizza-recept {
+    background-color: #3d3c3cf3;
+    color: antiquewhite;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.col-card {
+    padding: 10px;
+}
+
+.pizzap {
+    font-weight: 900;
+}
+
+.pizza-icons {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.pizza-icons img {
+    margin: 0 5px;
+    width: 50px;
+}
+
+.row {
+    border-radius: 15px;
+}
+
+.phone {
+    background: linear-gradient(to right, rgb(255, 0, 255), orange);
+    border-radius: 10px;
+    color: black;
+}
+
+.footer {
+    background-color: #3d3c3cf3;
+    font-size: 1.5em;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.Facebook {
+    text-decoration: none;
+    margin: 5px;
+    color: greenyellow;
+    transition: 0.5s;
+}
+
+.Facebook:hover {
+    text-decoration: none;
+    margin: 5px;
+    color: blue;
+    transition: 0.5s;
+}
+
+.Discord {
+    text-decoration: none;
+    margin: 5px;
+    color: greenyellow;
+    transition: 0.5s;
+}
+
+.Discord:hover {
+    text-decoration: none;
+    margin: 5px;
+    color: rgb(0, 149, 255);
+    transition: 0.5s;
+}
+
+.YouTube {
+    text-decoration: none;
+    margin: 5px;
+    color: greenyellow;
+    transition: 0.5s;
+}
+
+.YouTube:hover {
+    text-decoration: none;
+    margin: 5px;
+    color: red;
+    transition: 0.5s;
+}
+
+.Instagram {
+    text-decoration: none;
+    margin: 5px;
+    color: greenyellow;
+    transition: 0.5s;
+}
+
+.Instagram:hover {
+    text-decoration: none;
+    margin: 5px;
+    color: rgb(170, 0, 255);
+    transition: 0.5s;
+}
+
+.Twitter {
+    text-decoration: none;
+    margin: 5px;
+    color: greenyellow;
+    transition: 0.5s;
+}
+
+.Twitter:hover {
+    text-decoration: none;
+    margin: 5px;
+    color: rgb(0, 145, 255);
+    transition: 0.5s;
+}
+
+.text-footer {
+    font-family: 'Arial';
+}
