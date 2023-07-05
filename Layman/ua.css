@@ -1,0 +1,44 @@
+img {
+    width: 100%;
+}
+
+.logo {
+    width: 50px;
+}
+
+body {
+    background-image: url(background.jpg);
+    user-select: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar {
+    background-color: rgba(200, 255, 237, 0.503);
+    border-radius: 0px 0px 15px 15px;
+}
+
+.container {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.520);
+}
+
+iframe {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.youtube {
+    padding-bottom: 23px;
+}
+
+.logo-y {
+    width: 20px;
+}
+
+.footer {
+    background-color: rgba(200, 255, 237, 0.503);
+    border-radius: 15px 15px 15px 15px;
+    margin-top: 15px;
+    margin: 15px;
+    padding: 15px;
+}
