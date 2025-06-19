@@ -1,9 +1,9 @@
 head {
-  font-family: "Comfortaa", sans-serif;
+  font-family: "Comfortaa", sans-serif !Important;
 }
 
 body {
-  font-family: "Comfortaa", sans-serif;
+  font-family: "Comfortaa", sans-serif !Important;
   background-size: cover;
   /* или 'contain', в зависимости от эффекта */
   background-repeat: no-repeat;
