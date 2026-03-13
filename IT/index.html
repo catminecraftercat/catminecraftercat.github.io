@@ -1,1 +1,212 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Чи є в мене ІТ талант?</title>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin:0;
+    font-family:'Comfortaa', cursive;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:#fff;
+    overflow-x:hidden;
+  }
 
+  .container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 2rem;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    animation: fadeIn 1s ease forwards;
+  }
+
+  h1 {
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:1rem;
+    background: linear-gradient(90deg,#ff6ec4,#7873f5);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-shadow:2px 2px 12px rgba(0,0,0,0.5);
+  }
+
+  p {
+    font-size:1.2rem;
+    line-height:1.8;
+    margin-bottom:1.5rem;
+  }
+
+  .glass-card {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    animation: fadeIn 1.2s ease forwards;
+    position:relative;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  }
+
+  .btn-next {
+    display:inline-block;
+    padding:12px 30px;
+    font-size:1.2rem;
+    font-weight:bold;
+    color:#fff;
+    background: linear-gradient(90deg,#ff6ec4,#7873f5);
+    border:none;
+    border-radius:15px;
+    text-decoration:none;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+
+  .btn-next:hover {
+    transform: translateY(-3px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  input[type="radio"]{
+    margin-right:10px;
+    cursor:pointer;
+  }
+
+  #result{
+    margin-top:15px;
+    font-size:1.3rem;
+    font-weight:bold;
+    text-align:center;
+    color:#ffeb3b;
+  }
+
+  #workspace{
+    width: 100%;
+    height: 300px;
+    background: rgba(255,255,255,0.05);
+    border-radius:15px;
+    backdrop-filter: blur(15px);
+    margin-top:20px;
+    display:flex;
+    flex-wrap: wrap;
+    padding:10px;
+    overflow:auto;
+  }
+
+  .block {
+    width: 140px;
+    height: 60px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(20px);
+    margin:10px;
+    border-radius:12px;
+    text-align:center;
+    line-height:60px;
+    font-weight:bold;
+    cursor:grab;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  .block:active{
+    cursor:grabbing;
+    transform: scale(1.05);
+    box-shadow:0 8px 25px rgba(0,0,0,0.5);
+  }
+
+  @keyframes fadeIn{
+    from {opacity:0; transform: translateY(20px);}
+    to {opacity:1; transform: translateY(0);}
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Чи є в мене ІТ талант?</h1>
+
+  <div class="glass-card">
+    <p>Сфера IT — це простір для тих, хто любить **творчість, логіку та постійний розвиток**. Тут ти можеш створювати веб-сайти, додатки, ігри, алгоритми та багато іншого. Якщо ти готовий експериментувати та навчатися щодня — ти вже на правильному шляху!</p>
+  </div>
+
+  <div class="glass-card">
+    <h2>Міні-тест: Чи підходить тобі ІТ?</h2>
+    <form id="career-test">
+      <p>1. Тобі подобається вирішувати логічні задачі?</p>
+      <input type="radio" name="q1" value="yes"> Так<br>
+      <input type="radio" name="q1" value="no"> Ні<br>
+
+      <p>2. Тобі цікаво програмування?</p>
+      <input type="radio" name="q2" value="yes"> Так<br>
+      <input type="radio" name="q2" value="no"> Ні<br>
+
+      <p>3. Тобі подобається працювати на комп’ютері довго?</p>
+      <input type="radio" name="q3" value="yes"> Так<br>
+      <input type="radio" name="q3" value="no"> Ні<br>
+
+      <br>
+      <button type="button" onclick="checkTest()" class="btn-next">Перевірити ІТ талант</button>
+    </form>
+    <p id="result"></p>
+  </div>
+
+  <div class="glass-card">
+    <h2>Інтерактив: склади HTML-структуру</h2>
+    <p>Перетягни блоки у правильному порядку:</p>
+    <div id="workspace">
+      <div class="block" draggable="true" id="b1">Header</div>
+      <div class="block" draggable="true" id="b2">Main</div>
+      <div class="block" draggable="true" id="b3">Footer</div>
+    </div>
+  </div>
+
+  <a href="web-developer.html" class="btn-next">Далі →</a>
+</div>
+
+<script>
+/* Тест */
+function checkTest(){
+  let form = document.forms['career-test'];
+  let score=0;
+  for(let i=0;i<form.length;i++){
+    if(form[i].checked && form[i].value==='yes') score++;
+  }
+  let resultText='';
+  if(score===3) resultText="Вау! У тебе яскравий ІТ талант! 🚀";
+  else if(score===2) resultText="Ти маєш потенціал, варто спробувати! 👍";
+  else resultText="Можливо, інші галузі підходять більше, але спробуй ІТ! 💡";
+  document.getElementById('result').innerText=resultText;
+}
+
+/* Drag & Drop */
+const blocks = document.querySelectorAll('.block');
+blocks.forEach(block=>{
+  block.addEventListener('dragstart',e=>{
+    e.dataTransfer.setData('text/plain', block.id);
+    setTimeout(()=>{block.style.display='none'},0);
+  });
+
+  block.addEventListener('dragend',e=>{
+    block.style.display='block';
+  });
+});
+
+const workspace=document.getElementById('workspace');
+workspace.addEventListener('dragover',e=>{
+  e.preventDefault();
+});
+workspace.addEventListener('drop',e=>{
+  e.preventDefault();
+  const id=e.dataTransfer.getData('text/plain');
+  const dragged=document.getElementById(id);
+  workspace.appendChild(dragged);
+});
+</script>
+
+</body>
+</html>
