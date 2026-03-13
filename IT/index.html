@@ -3,15 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Чи є в мене ІТ талант?</title>
+<title>IT Талант | Інтерактивний Тест</title>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  body {
+  body, html {
     margin:0;
+    padding:0;
     font-family:'Comfortaa', cursive;
-    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    color:#fff;
     overflow-x:hidden;
+    height:100%;
+    background:#111;
+    color:#fff;
+  }
+
+  canvas {
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
   }
 
   .container {
@@ -22,7 +31,6 @@
     backdrop-filter: blur(20px);
     border-radius: 20px;
     box-shadow: 0 0 40px rgba(0,0,0,0.5);
-    animation: fadeIn 1s ease forwards;
   }
 
   h1 {
@@ -35,19 +43,11 @@
     text-shadow:2px 2px 12px rgba(0,0,0,0.5);
   }
 
-  p {
-    font-size:1.2rem;
-    line-height:1.8;
-    margin-bottom:1.5rem;
-  }
-
   .glass-card {
     background: rgba(255,255,255,0.08);
     padding: 25px;
     border-radius: 18px;
     margin-bottom: 25px;
-    animation: fadeIn 1.2s ease forwards;
-    position:relative;
     backdrop-filter: blur(15px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.3);
   }
@@ -72,22 +72,9 @@
     box-shadow:0 10px 30px rgba(0,0,0,0.5);
   }
 
-  input[type="radio"]{
-    margin-right:10px;
-    cursor:pointer;
-  }
-
-  #result{
-    margin-top:15px;
-    font-size:1.3rem;
-    font-weight:bold;
-    text-align:center;
-    color:#ffeb3b;
-  }
-
-  #workspace{
+  #workspace {
     width: 100%;
-    height: 300px;
+    min-height: 250px;
     background: rgba(255,255,255,0.05);
     border-radius:15px;
     backdrop-filter: blur(15px);
@@ -113,99 +100,120 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   }
 
-  .block:active{
+  .block:active {
     cursor:grabbing;
     transform: scale(1.05);
     box-shadow:0 8px 25px rgba(0,0,0,0.5);
   }
 
-  @keyframes fadeIn{
-    from {opacity:0; transform: translateY(20px);}
-    to {opacity:1; transform: translateY(0);}
+  input[type="text"] {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: #fff;
+    padding:5px 10px;
+    border-radius:8px;
+    margin-right:5px;
+    width:100px;
+    text-align:center;
   }
 </style>
 </head>
 <body>
 
+<canvas id="bgCanvas"></canvas>
+
 <div class="container">
-  <h1>Чи є в мене ІТ талант?</h1>
+  <h1>Відкрий свій IT талант!</h1>
 
   <div class="glass-card">
-    <p>Сфера IT — це простір для тих, хто любить **творчість, логіку та постійний розвиток**. Тут ти можеш створювати веб-сайти, додатки, ігри, алгоритми та багато іншого. Якщо ти готовий експериментувати та навчатися щодня — ти вже на правильному шляху!</p>
+    <p>IT — це світ, де логіка зустрічається з творчістю. Тут ти можеш створювати веб-сайти, ігри, алгоритми, додатки та сервіси, які використовують мільйони людей. Якщо тобі подобається вирішувати задачі, експериментувати та розвиватися щодня — ти вже на правильному шляху!</p>
   </div>
 
   <div class="glass-card">
-    <h2>Міні-тест: Чи підходить тобі ІТ?</h2>
-    <form id="career-test">
-      <p>1. Тобі подобається вирішувати логічні задачі?</p>
-      <input type="radio" name="q1" value="yes"> Так<br>
-      <input type="radio" name="q1" value="no"> Ні<br>
+    <h2>Інтерактивний тест: склади код</h2>
+    <p>Перетягни блоки у правильному порядку та заповни пропущений код:</p>
 
-      <p>2. Тобі цікаво програмування?</p>
-      <input type="radio" name="q2" value="yes"> Так<br>
-      <input type="radio" name="q2" value="no"> Ні<br>
-
-      <p>3. Тобі подобається працювати на комп’ютері довго?</p>
-      <input type="radio" name="q3" value="yes"> Так<br>
-      <input type="radio" name="q3" value="no"> Ні<br>
-
-      <br>
-      <button type="button" onclick="checkTest()" class="btn-next">Перевірити ІТ талант</button>
-    </form>
-    <p id="result"></p>
-  </div>
-
-  <div class="glass-card">
-    <h2>Інтерактив: склади HTML-структуру</h2>
-    <p>Перетягни блоки у правильному порядку:</p>
     <div id="workspace">
-      <div class="block" draggable="true" id="b1">Header</div>
-      <div class="block" draggable="true" id="b2">Main</div>
-      <div class="block" draggable="true" id="b3">Footer</div>
+      <div class="block" draggable="true" data-code="print('Hello World')">print('Hello World')</div>
+      <div class="block" draggable="true" data-code="for i in range(5):">for i in range(5):</div>
+      <div class="block" draggable="true" data-code="if x &gt; 0:">if x &gt; 0:</div>
     </div>
+
+    <p>Введи пропущене слово:</p>
+    <input type="text" id="userInput" placeholder="Наприклад: else">
+    <button class="btn-next" onclick="checkCode()">Перевірити код</button>
+    <p id="codeResult"></p>
   </div>
 
   <a href="web-developer.html" class="btn-next">Далі →</a>
 </div>
 
 <script>
-/* Тест */
-function checkTest(){
-  let form = document.forms['career-test'];
-  let score=0;
-  for(let i=0;i<form.length;i++){
-    if(form[i].checked && form[i].value==='yes') score++;
-  }
-  let resultText='';
-  if(score===3) resultText="Вау! У тебе яскравий ІТ талант! 🚀";
-  else if(score===2) resultText="Ти маєш потенціал, варто спробувати! 👍";
-  else resultText="Можливо, інші галузі підходять більше, але спробуй ІТ! 💡";
-  document.getElementById('result').innerText=resultText;
+/* Canvas анімація */
+const canvas = document.getElementById('bgCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+for(let i=0;i<100;i++){
+  particles.push({
+    x: Math.random()*canvas.width,
+    y: Math.random()*canvas.height,
+    r: Math.random()*3+1,
+    dx: (Math.random()-0.5)*1.5,
+    dy: (Math.random()-0.5)*1.5
+  });
 }
+
+function animate(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  particles.forEach(p=>{
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle='rgba(255,255,255,0.5)';
+    ctx.fill();
+    p.x+=p.dx;
+    p.y+=p.dy;
+    if(p.x<0||p.x>canvas.width) p.dx*=-1;
+    if(p.y<0||p.y>canvas.height) p.dy*=-1;
+  });
+  requestAnimationFrame(animate);
+}
+animate();
 
 /* Drag & Drop */
 const blocks = document.querySelectorAll('.block');
 blocks.forEach(block=>{
   block.addEventListener('dragstart',e=>{
-    e.dataTransfer.setData('text/plain', block.id);
+    e.dataTransfer.setData('text/plain', block.dataset.code);
     setTimeout(()=>{block.style.display='none'},0);
   });
-
   block.addEventListener('dragend',e=>{
     block.style.display='block';
   });
 });
 
 const workspace=document.getElementById('workspace');
-workspace.addEventListener('dragover',e=>{
-  e.preventDefault();
-});
+workspace.addEventListener('dragover',e=>e.preventDefault());
 workspace.addEventListener('drop',e=>{
   e.preventDefault();
-  const id=e.dataTransfer.getData('text/plain');
-  const dragged=document.getElementById(id);
-  workspace.appendChild(dragged);
+  const code=e.dataTransfer.getData('text/plain');
+  const div=document.createElement('div');
+  div.className='block';
+  div.textContent=code;
+  workspace.appendChild(div);
 });
+
+/* Перевірка коду */
+function checkCode(){
+  const userInput=document.getElementById('userInput').value.trim().toLowerCase();
+  if(userInput==='else'){
+    document.getElementById('codeResult').innerText="Відмінно! Ти справжній IT-талант! 🚀";
+  }else{
+    document.getElementById('codeResult').innerText="Спробуй ще раз!";
+  }
+}
 </script>
 
 </body>
